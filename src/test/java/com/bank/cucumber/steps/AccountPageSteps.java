@@ -49,7 +49,8 @@ public class AccountPageSteps {
     }
 
     @And("^I enter amount to be withdrawn \"([^\"]*)\"$")
-    public void iEnterAmountToBeWithdrawn(String amout)  {
+    public void iEnterAmountToBeWithdrawn(String amout) throws InterruptedException {
+        Thread.sleep(2000);
         new AccountPage().enteramountForCash(amout);
 
     }

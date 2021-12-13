@@ -23,8 +23,8 @@ public class ManageDriver {
     public ManageDriver() {
         PageFactory.initElements(driver, this);           //new line 29
 
-        PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/test/java/resources/propertiesfile/log4j2.properties");
-    }
+        PropertyConfigurator.configure(System.getProperty("user.dir") + "/src/test/java/resources/extentreport/propertiesfile/log4j2.properties");
+    }                                                                           //  src/test/java/resources/extentreport/propertiesfile/log4j2.properties
 
     public void selectBrowser(String browser) {
         if (browser.equalsIgnoreCase("chrome")) {

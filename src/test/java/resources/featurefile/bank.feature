@@ -2,7 +2,7 @@ Feature: Bank Functionality
 
   Background: I am on home page
 
-  @smoke
+@smoke
   Scenario: bank manager should add customer successfully
     When I click on manager login link
     Then I click on add customer tab
@@ -11,7 +11,7 @@ Feature: Bank Functionality
     And I enter postal code "01546"
     And I click on add customer button
 
-  @sanity
+@smoke,@sanity
   Scenario: bank manager should open account successfully
     When I click on manager login link
     Then I click on open account tab
@@ -19,14 +19,14 @@ Feature: Bank Functionality
     And I select currency "Pound"
     And I click on process button
 
-  @smoke
+@sanity
   Scenario: customer should login and logout successfully
     When I click on customer login link
     And I select customer name "Harry Potter"
     And I click on login button
     And I click on Logout  button
 
-  @sanity
+@smoke,@regression
   Scenario: Customer should deposit money successfully
     When I click on customer login link
     And I select my name "Harry Potter"

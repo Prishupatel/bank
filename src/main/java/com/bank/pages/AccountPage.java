@@ -4,7 +4,6 @@ import com.bank.utility.Utility;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -28,8 +27,8 @@ public class AccountPage extends Utility {
     @FindBy(css = "input[placeholder='amount']")
     WebElement setAmount;
 
-    @CacheLookup
-    @FindBy(xpath = "//input[@placeholder='amount']")  //input[@placeholder='amount']
+
+    @FindBy(xpath = "//input[@placeholder='amount']")
     WebElement withdrawAmmount;
 
     @FindBy(xpath = "//button[contains(text(),'Withdrawl')]")
